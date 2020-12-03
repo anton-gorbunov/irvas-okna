@@ -1,0 +1,97 @@
+.header{
+    padding:20px 0;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__logo-descr{
+        width: 225px;
+        color: #0096dc;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        margin-left: 26px;
+    }
+    &__call{
+        margin-left: 113px;
+        width: 170px;
+        height: 60px;
+        border-radius: 10px;
+        border: 2px solid #55a831;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        &-descr{
+            width: 95px;
+            a{
+                color: #55a831;
+                font-size: 14px;
+                font-weight: 700;
+                text-align: left;
+                line-height: 16px;
+                display: block;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__time{
+        margin-left: 54px;
+        width:150px;
+        display:grid;
+        grid-template-columns: 30px 100px;
+        grid-template-rows:auto;
+        grid-auto-rows: auto;
+        column-gap: 20px;
+        align-items: center;
+        &-img{
+            grid-row:1/3;
+        }
+        &-descr{
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+        }
+        &-num{
+            color: #333333;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+    }
+    &__phone{
+        margin-left: 70px;
+        width:231px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &-top{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-number{
+            width: 196px;
+            a{
+                    color: #333333;
+                    font-size: 22px;
+                    font-weight: 700;
+                    text-align: right;
+                    &:hover{
+                        text-decoration: none;
+                    }
+            }
+        }
+        &-link{
+            color: #0089cc;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: right;
+            text-decoration: underline;
+        }
+    }
+}
