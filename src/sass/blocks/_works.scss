@@ -1,0 +1,91 @@
+.works{
+    padding:80px 0;
+    &__wrapper{
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(4,270px);
+        grid-template-rows:repeat(2,270px);
+        grid-auto-rows: 270px;
+        column-gap:30px;
+        row-gap: 30px;
+    }
+    &__item{
+        border-radius:10px;
+        position: relative;
+        cursor:pointer;
+        img{
+            width:100%;
+            border-radius:10px;
+        }
+        &:hover{
+            filter: drop-shadow(2px 3px 10px black);
+            &:before{
+                content:'';
+                width:50px;
+                height:50px;
+                background:url(../icons/zoom.png)center center no-repeat;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+            }
+        }
+    }
+    &__overlay{
+        visibility: hidden;
+        opacity:0;
+        transition: all 1s;
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        background-color:rgba(0,0,0,0.8);
+        &_active{
+            visibility:visible;
+            opacity:1;
+            
+        }
+
+    }
+    &__zoom{
+        width:640px;
+        height: 640px;
+        border:5px solid#fff;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        position:absolute;
+        border-radius:20px;
+        
+        img{
+            width:100%;
+            border-radius:20px;
+        }
+
+    }
+    &__close{
+        font-size: 40px;
+        color:#fff;
+        position:absolute;
+        top:-20px;
+        right:-40px;
+        cursor:pointer;
+    }
+    &__left-arrow, &__right-arrow{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        font-size: 80px;
+        font-weight: 700;
+        color:#fff;
+        cursor: pointer;
+        user-select:none;
+    }
+    &__left-arrow{
+        left:-10%;
+    }
+    &__right-arrow{
+        right:-10%;
+    }
+}

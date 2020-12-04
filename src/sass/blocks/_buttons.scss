@@ -1,0 +1,27 @@
+.button{
+    display: block;
+    box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+    border-radius: 10px;
+    border: 1px solid #ffc600;
+    background-color: #e8e8e8;
+    background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    &:focus{
+        outline:none;
+    }
+    &_big{
+        display: block;
+        margin:0 auto 20px auto;
+        width: 270px;
+        height: 80px;
+        font-size: 17px;
+    }
+    &_small{
+        width: 262px;
+        height: 65px;
+        font-size: 16px;
+    }
+}
