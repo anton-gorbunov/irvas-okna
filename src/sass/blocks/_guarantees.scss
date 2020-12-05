@@ -1,0 +1,33 @@
+.guarantees{
+    padding:80px 0;
+    background-color:#0787C6;
+    &__wrapper{
+        margin-top: 80px;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:145px;
+        grid-auto-rows:145px;
+        row-gap:80px;
+    }
+    &-block{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:70px 45px;
+        grid-auto-rows: auto;
+        justify-items: center;
+        row-gap: 30px;
+      
+       
+        &__descr{
+            width:175px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &__img{
+            align-self: center;
+        }
+    }
+    
+}

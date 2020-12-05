@@ -1,0 +1,35 @@
+.pay{
+    padding:80px 0;
+    &__title{
+        color: #333333;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__container{
+        margin-top: 80px;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:70px;
+        grid-auto-rows: 70px;
+        justify-items:center;
+        
+    }
+    &__item{
+       
+        display: flex;
+        align-items: center;
+        
+    }
+    &__img{
+        
+        
+    }
+    &__descr{
+        color: #000000;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        margin-left: 30px;
+    }
+}

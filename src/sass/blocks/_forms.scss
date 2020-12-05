@@ -1,12 +1,16 @@
 .form{
-    padding:40px 50px;
+    padding:45px 50px;
     width: 370px;
-    height: 442px;
+    min-height: 442px;
     border-radius: 10px;
     background-color: #ffffff;
     display:flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    &_min{
+        min-height:150px;
+    }
     &-title{
         color: #333333;
         font-size: 20px;

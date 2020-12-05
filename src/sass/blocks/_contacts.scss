@@ -1,0 +1,45 @@
+.contacts{
+    padding:80px 0;
+    &__wrapper{
+        margin-top: 80px;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:auto;
+        grid-auto-rows: auto;
+
+    }
+    &__map{
+        iframe{
+            width: 569px;
+            height: 467px; 
+            border:0;
+        }
+    }
+    &__info{
+        padding-left: 120px;
+    }
+    &__subtitle{
+        color: #008cce;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+    &__text{
+        color: #000000;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+       
+    }
+    a{
+        color: #000000;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+    }
+}

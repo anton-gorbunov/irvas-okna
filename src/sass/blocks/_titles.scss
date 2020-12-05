@@ -13,9 +13,9 @@
     height: 2px;
     margin:20px auto 0 auto;
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(13,143,227,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(7,135,198,1) 50%, rgba(255,255,255,1) 100%);
     &_white{
         background: rgb(13,143,227);
-        background: linear-gradient(90deg, rgba(13,143,227,1) 0%, rgba(255,255,255,1) 50%, rgba(13,143,227,1) 100%);
+        background: linear-gradient(90deg, rgba(7,135,198,1) 0%, rgba(255,255,255,1) 50%, rgba(7,135,198,1) 100%);
     }
 }

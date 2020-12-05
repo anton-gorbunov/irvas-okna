@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 @import 'libs/bootstrap-reboot.min';
+@import 'base/mixins';
 
 *{
     font-family: 'Open Sans', sans-serif;
 }
 .container{
-    width:1170px;
+    max-width:1170px;
     margin:0 auto;
 }
 @import 'blocks/header';
@@ -16,3 +17,11 @@
 @import 'blocks/titles';
 @import 'blocks/balkon';
 @import 'blocks/works';
+@import 'blocks/guarantees';
+@import 'blocks/pay';
+@import 'blocks/stock';
+@import 'blocks/contacts';
+@import 'blocks/quesions';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/media';

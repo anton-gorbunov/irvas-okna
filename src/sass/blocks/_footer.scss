@@ -1,0 +1,41 @@
+.footer{
+    padding:35px 0;
+    &__wrapper{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:42px;
+        grid-auto-rows: auto;
+        justify-items:center;
+        align-items: center;
+    }
+    &__descr{
+        width: 180px;
+        color: #000000;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        justify-self:flex-start;
+    }
+    &__contacts{
+        justify-self:flex-end;
+    }
+    &__phone{
+        display: block;
+        color: #333333;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: right;
+        &:hover{
+            color:#333333;
+        }
+    }
+    &__email{
+        display:block;
+        color: #0090d5;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: right;
+        text-decoration: underline;
+    }
+}

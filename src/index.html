@@ -41,7 +41,7 @@
                     <div class="header__call-icon">
                         <img src="icons/header/call.png" alt="call">
                     </div>
-                    <div class="header__call-descr"><a href="#">ВЫЗВАТЬ ЗАМЕРЩИКА</a></div>
+                    <div class="header__call-descr"><a href="#" data-measuring>ВЫЗВАТЬ ЗАМЕРЩИКА</a></div>
                 </div>
                 <div class="header__time">
                     <div class="header__time-img">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="header__phone-link">
-                        <a href="#">Заказать обратный звонок</a>
+                        <a href="#" data-call>Заказать обратный звонок</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                     </ul>
                      <div class="glazing-block__footer">
                          <div class="glazing-block__price">2600 руб.кв.м.</div>
-                         <button class="glazing-block__button button button_small">
+                         <button class="glazing-block__button button button_small" data-calculate>
                              Рассчитать стоимость
                         </button>
                          <div class="glazing-block__descr">под ключ с установкой</div>
@@ -201,7 +201,7 @@
                     </ul>
                       <div class="glazing-block__footer">
                           <div class="glazing-block__price">4000 руб.кв.м.</div>
-                          <button class="glazing-block__button button button_small">
+                          <button class="glazing-block__button button button_small" data-calculate>
                               Рассчитать стоимость
                         </button>
                           <div class="glazing-block__descr">под ключ с установкой</div>
@@ -436,26 +436,232 @@
             <h2 class="works__title title">Наши работы</h2>
             <div class="works__line line"></div>
             <div class="works__wrapper">
-                <div class="works__item"><img src="img/works/1.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/2.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/3.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/4.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/5.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/6.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/7.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/works/8.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/1.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/2.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/3.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/4.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/5.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/6.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/7.jpg" alt="works"></div>
+                <div class="works__item"><img src="img/work/8.jpg" alt="works"></div>
             </div>
         </div>
         <div class="works__overlay">
+            <div class="works__count"></div>
             <div class="works__zoom">
                 <img src="#" alt="works">
                 <div class="works__close">&times;</div>
                 <div class="works__left-arrow">&#8249;</div>
                 <div class="works__right-arrow">&#8250;</div>
             </div>
-            
         </div>
     </section>
+
+    <section class="guarantees">
+        <div class="container">
+            <h2 class="guarantees__title title title_white">МЫ ГАРАНТИРУЕМ ВАМ</h2>
+            <div class="guarantees__line line line_white"></div>
+            <div class="guarantees__wrapper">
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/1.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">Высокое качество</div>
+                </div>
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/2.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">
+                        Выполнение работ под ключ
+                    </div>
+                </div>
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/3.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">
+                        Монтаж в короткие сроки
+                    </div>
+                </div>
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/4.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">
+                        Цены от производителя
+                    </div>
+                </div>
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/5.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">
+                        Бесплатный замер и консультацию
+                    </div>
+                </div>
+                <div class="guarantees-block">
+                    <div class="guarantees-block__img">
+                        <img src="icons/guarantees/6.png" alt="guarantees">
+                    </div>
+                    <div class="guarantees-block__descr">
+                        Тепло и уют на балконе
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pay">
+        <div class="container">
+            <h2 class="pay__title">Вы можете оплатить наши услуги:</h2>
+            <div class="pay__container">
+                <div class="pay__item">
+                    <div class="pay__img">
+                        <img src="icons/pay/1.png" alt="pay_icon">
+                    </div>
+                    <div class="pay__descr">Наличными</div>
+                </div>
+                <div class="pay__item">
+                    <div class="pay__img">
+                        <img src="icons/pay/2.png" alt="pay_icon">
+                    </div>
+                    <div class="pay__descr">Банковской картой</div>
+                </div>
+                <div class="pay__item">
+                    <div class="pay__img">
+                        <img src="icons/pay/3.png" alt="pay_icon">
+                    </div>
+                    <div class="pay__descr">Безналичный расчет</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stock">
+        <div class="container">
+            <div class="stock__wrapper">
+                <div class="stock__info">
+                    <h2 class="stock__title">АКЦИЯ - 60%</h2>
+                    <div class="stock__descr">
+                        Успей сэкономить на остеклении! Только до 23 апреля! 
+                    </div>
+                    <div class="stock__timer">
+                        <div class="stock__subtitle">До завершения акции:</div>
+                        <div class="stock__timer-wrapper">
+                            <div class="stock__timer-block">
+                                <div class="stock__timer-num timer__days">01</div>
+                                <div class="stock__timer-str">дней</div>
+                            </div>
+                            <div class="stock__timer-block">
+                                <div class="stock__timer-num timer__hours">13</div>
+                                <div class="stock__timer-str">часов</div>
+                            </div>
+                            <div class="stock__timer-block">
+                                <div class="stock__timer-num timer__minutes">40</div>
+                                <div class="stock__timer-str">минут</div>
+                            </div>
+                            <div class="stock__timer-block">
+                                <div class="stock__timer-num timer__seconds">45</div>
+                                <div class="stock__timer-str">секунд</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock__form form">
+                    <div class="form-title">
+                        Запишитесь сегодня на
+                        <span>БЕСПЛАТНЫЙ ЗАМЕР</span>
+                    </div>
+                    <form action="#">
+                        <input type="text" name="name" class="form-input "placeholder="Введите ваше имя" required>
+                        <input type="text" name="phone" class="form-input "placeholder="+7 (___) ___-__-__" required>
+                        <button class="button button_big">Вызвать замерщика!</button>
+                    </form>
+                    <div class="form-policy">Ваши данные конфиденциальны</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <h2 class="contacts__title title">КАК НАС НАЙТИ</h2>
+            <div class="contacts__line line"></div>
+            <div class="contacts__wrapper">
+                <div class="contacts__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.2618174046893!2d37.602909215744454!3d55.92749898597241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53a0ac32d875f%3A0xe1064c1e68c2b74a!2z0YPQuy4g0JLRi9GB0YLQsNCy0L7Rh9C90LDRjywgNTMsINCS0LXRiNC60LgsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDEyNzU0Mw!5e0!3m2!1sru!2sru!4v1607174150713!5m2!1sru!2sru" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="contacts__info">
+                    <div class="contacts__subtitle">Юридический адрес:</div>
+                    <adress class="contacts__text">
+                        ООО «ИРВАС», 127411, г.Москва, Дмитровское
+                        шоссе, д.125, корпус 1
+                    </adress>
+                    <div class="contacts__subtitle">Фактический адрес:</div>
+                    <adress class="contacts__text">
+                        ООО «ИРВАС», 141031, МО, Мытищинский р-он, 
+                        п.Вешки,Выставочная,д.53
+                    </adress>
+                    <div class="contacts__subtitle">Телефон:</div>
+                    <div class="contacts__text">
+                        <a href="tel:+74956466171">+7 (495) 646-61-71 </a>(многоканальный)
+                    </div>
+                    <div class="contacts__subtitle">E-mail:</div>
+                    <a href="#" class="contacts__email">info@irvasokna.ru</a>
+                    <div class="contacts__subtitle">Режим работы:</div>
+                    <div class="contacts__text">9:00 - 18:00 без выходных</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="container">
+            <h2 class="questions__title">Остались вопросы? 
+                <a href="#" data-call>
+                    Спросите у нашего специалиста!
+                </a>
+            </h2>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__descr">
+                    2017 © Ирвас окна Работаем без выходных
+                </div>
+                <div class="footer__logo">
+                    <a href="#"><img src="icons/logo.png" alt="logo"></a>
+                </div>
+                <div class="footer__contacts">
+                    <a href="tel:+74956466171" class="footer__phone">+7 (495) 646-61-71</a>
+                    <a href="" class="footer__email">info@irvasokna.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="overlay__modal">
+            <div class="overlay__form form">
+                <div class="overlay__modal-close">&times;</div>
+                <div class="form-title overlay__title">
+                    Запишитесь сегодня на
+                </div>
+                <div class="overlay__subtitle">
+                    БЕСПЛАТНЫЙ ЗАМЕР
+                </div>
+                <form action="#" method="POST">
+                    <input type="text" name="name" class="form-input "placeholder="Введите ваше имя" required>
+                    <input type="text" name="phone" class="form-input "placeholder="+7 (___) ___-__-__" required>
+                    <button class="overlay__button button button_big">Вызвать замерщика!</button>
+                    <div class="form-policy">Ваши данные конфиденциальны</div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
