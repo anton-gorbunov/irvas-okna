@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded',() => {
           arrowNext = document.querySelector('.works__right-arrow'),
           arrowLast = document.querySelector('.works__left-arrow'),
           slidesCount = document.querySelector('.works__count');
-    let slideIndex = 0;
+          
+    let slideIndex = 0,
+        width = window.getComputedStyle(document.body).width;
+        width = +width.slice(0,width.length-2);
+
     function closeOverlay(){
         imagesOverlay.classList.remove('works__overlay_active');
         document.body.style.overflow = '';
@@ -80,14 +84,16 @@ document.addEventListener('DOMContentLoaded',() => {
         }
     });
     images.forEach((item,i) => {
-        item.addEventListener('click',(event) => {
-            if(event.target.closest('.works__item')){
-                imagesOverlay.classList.add('works__overlay_active');
-                document.body.style.overflow = 'hidden';
-                slideIndex = i;
-                changeSlide();
-            }
-        });
+       if (width > 576){
+            item.addEventListener('click',(event) => {
+                if(event.target.closest('.works__item')){
+                    imagesOverlay.classList.add('works__overlay_active');
+                    document.body.style.overflow = 'hidden';
+                    slideIndex = i;
+                    changeSlide();
+                }
+            });
+       }
     });
     arrowLast.addEventListener('click',() => {
         showPreviousSlide();      
@@ -262,7 +268,7 @@ document.addEventListener('DOMContentLoaded',() => {
         modalOverlay.classList.add('overlay_active');
         modalPrev.classList.add('hide');
         let modalThanks = document.createElement('div');
-        modalThanks.classList.add('form','form_min');
+        modalThanks.classList.add('form','form_min','overlay__form');
         modalThanks.innerHTML = `
         <div class="modal__content">
             <div class="overlay__modal-close">&times;</div>
@@ -278,5 +284,30 @@ document.addEventListener('DOMContentLoaded',() => {
             modalPrev.classList.remove('hide');
         },4000);
     }
+
+     //to top button
+
+  const btn = document.querySelector('.up-btn');
+
+  document.addEventListener('scroll', () => {
+      let scrolled = window.pageYOffset;
+      let coords = document.documentElement.clientHeight;
+
+      if (scrolled > coords ){
+          btn.classList.add('up-btn_active');
+      } else {
+          btn.classList.remove('up-btn_active');
+      }
+  });
+
+  btn.addEventListener('click', backToTop);
+  
+  function backToTop() {
+      
+      if (window.pageYOffset > 0) {
+          window.scrollBy(0,-80);
+          setTimeout(backToTop,0);
+      } 
+  }
 });
 

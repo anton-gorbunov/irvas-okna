@@ -73,6 +73,11 @@
         justify-self:flex-end;
     }
     &__content{
+        &-img{
+            img{
+                width:100%;
+            }
+        }
         &-block{
             display:none;
             grid-template-columns:300px 415px;
@@ -263,7 +268,7 @@
         &-montage{
             padding-left: 30px;
             .balkon__content-title{
-                margin: 70px 0 30px 0;
+                margin: 20px 0 30px 0;
             }
         }
         &-roof{

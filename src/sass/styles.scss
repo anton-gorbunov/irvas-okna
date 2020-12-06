@@ -9,6 +9,26 @@
     max-width:1170px;
     margin:0 auto;
 }
+.up-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+    width:50px;
+    height:50px;
+    opacity:0;
+    transition:all .8s
+}
+.up-btn img{
+    width:100%
+}
+.up-btn_active{
+    opacity:.5;
+    transition:all .8s
+}
+.up-btn_active:hover{
+    opacity:1
+}
 @import 'blocks/header';
 @import 'blocks/promo';
 @import 'blocks/glazing';

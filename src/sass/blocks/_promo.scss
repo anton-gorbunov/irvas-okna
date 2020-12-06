@@ -28,9 +28,11 @@
     &__icons{
         width:500px;
         margin-top: 125px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+       /*  justify-items: center; */
 
     }
     &__round{
