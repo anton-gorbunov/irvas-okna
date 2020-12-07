@@ -31,15 +31,26 @@
         font-weight: 400;
         text-align: center;
         margin-bottom: 20px;
+        &:nth-child(2){
+            margin-bottom: 10px;
+        }
         &:focus{
             outline:none;
         }
+    }
+    .button{
+        margin-top: 10px;
     }
    
     &-policy{
         color: #666666;
         font-size: 11px;
-        font-weight: 300;
+        font-weight: 400;
+        text-align: center;
+    }
+    &-error{
+        font-size: 11px;
+        color:red;
         text-align: center;
     }
 }

@@ -72,12 +72,6 @@ document.addEventListener('DOMContentLoaded',() => {
     closeImg.addEventListener('click',() => {
         closeOverlay();
     });
-    imagesOverlay.addEventListener('click',(event) => {
-        if (event.target.classList.contains('works__overlay')){
-            closeOverlay();
-            
-        }
-    });
     document.addEventListener('keydown',(event) => {
         if (event.code == 'Escape'){
             closeOverlay();
@@ -218,13 +212,54 @@ document.addEventListener('DOMContentLoaded',() => {
     openModal('[data-call]', modalMessages.call);
     openModal('[data-calculate]', modalMessages.calculate);
 
+    //PhoneInputMask
+
+    function setCursorPosition(pos, elem) {
+        elem.focus();
+        if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+        else if (elem.createTextRange) {
+            var range = elem.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select();
+        }
+    }
+    function mask(event) {
+        let matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        if (def.length >= val.length){
+            val = def;
+        } 
+        this.value = matrix.replace(/./g, function(a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
+        });
+        if (event.type == "blur") {
+            if (this.value.length == 2) {
+                this.value = "";
+            }
+        } else {
+            setCursorPosition(this.value.length, this);
+        } 
+    }
+        const inputs = document.querySelectorAll("[data-phone]");
+    
+        inputs.forEach(item => {
+            item.addEventListener("input", mask, false);
+            item.addEventListener("blur", mask, false);
+        });
+
     //forms
+
 
     const forms = document.querySelectorAll('form'),
           message = {
             loading: 'icons/spinner.svg',
             success: 'Спасибо! Скоро мы с вами свяжемся',
-            failure: 'Что-то пошло не так...'
+            failure: 'Что-то пошло не так...',
+            error: 'Некорректный номер телефона'
     };
     const postData = async (url, data) => {
         const result = await fetch(url, {
@@ -242,27 +277,27 @@ document.addEventListener('DOMContentLoaded',() => {
     function bindPostData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-
             let statusMessage = document.createElement('img');
-            statusMessage.src = message.loading;
-            statusMessage.classList.add('overlay__spiner');
-            
+                statusMessage.src = message.loading;
+                statusMessage.classList.add('overlay__spiner');
+                
             form.insertAdjacentElement('afterend', statusMessage);
             const formData = new FormData(form);
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
-            postData('mailer/smart.php',json)
+                postData('mailer/smart.php',json)
             .then(() => {
                 showThanksModal(message.success);
                 statusMessage.remove();
+               
             }).catch(() => {
                 showThanksModal(message.failure);
                 statusMessage.remove();
             }).finally(() => {
                 form.reset();
             });
+            
         });
     }
-
     function showThanksModal(message){
         const modalPrev = document.querySelector('.overlay__form');
         modalOverlay.classList.add('overlay_active');
@@ -310,4 +345,18 @@ document.addEventListener('DOMContentLoaded',() => {
       } 
   }
 });
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 

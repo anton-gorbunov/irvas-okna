@@ -107,7 +107,7 @@
                     </div>
                     <form action="#">
                         <input type="text" name="name" class="form-input promo__input" placeholder="Введите ваше имя" required>
-                        <input type="text" name="phone" class="form-input promo__input" placeholder="+7 (___) ___-__-__" required>
+                        <input type="text" name="phone" class="form-input promo__input" data-phone placeholder="+7 (___) ___-__-__" required>
                         <button class="promo__btn button button_big">Вызвать замерщика!</button>
                     </form>
                     <div class="promo__policy form-policy">Ваши данные конфиденциальны</div>
@@ -156,7 +156,7 @@
                 <div class="glazing-block">
                     <div class="glazing-block__title">ХОЛОДНОЕ</div>
                     <div class="glazing-block__img">
-                        <img src="img/balkon/1.jpg" alt="balkon">
+                        <img loading="lazy" src="img/balkon/1.jpg" alt="balkon">
                     </div>
                     <ul class="glazing-block__list">
                         <li class="glazing-block__item">
@@ -184,7 +184,7 @@
                 <div class="glazing-block">
                     <div class="glazing-block__title">теплое</div>
                     <div class="glazing-block__img">
-                        <img src="img/balkon/2.jpg" alt="balkon">
+                        <img loading="lazy" src="img/balkon/2.jpg" alt="balkon">
                     </div>
                     <ul class="glazing-block__list">
                         <li class="glazing-block__item">
@@ -245,7 +245,7 @@
                     <div class="balkon__content">
                         <div class="balkon__content-block balkon__content-block_active">
                             <div class="balkon__content-img">
-                                <img src="img/order/inside.jpg" alt="balkon">
+                                <img loading="lazy" src="img/order/inside.jpg" alt="balkon">
                             </div>
                             <div class="balkon__content-materials">
                                 <div class="balkon__content-items">
@@ -292,7 +292,7 @@
                         </div>
                         <div class="balkon__content-block">
                             <div class="balkon__content-img">
-                                <img src="img/order/outside.jpg" alt="outside">
+                                <img loading="lazy" src="img/order/outside.jpg" alt="outside">
                             </div>
                             <div class="balkon__content-colors">
                                 <div class="balkon__content-title">
@@ -347,7 +347,7 @@
                         </div>
                         <div class="balkon__content-block">
                             <div class="balkon__content-img">
-                                <img src="img/order/glazing.jpg" alt="glazing">
+                                <img loading="lazy" src="img/order/glazing.jpg" alt="glazing">
                             </div>
                             <div class="balkon__content-glazing">
                                 <div class="balkon__content-title">
@@ -385,7 +385,7 @@
                         </div>
                         <div class="balkon__content-block">
                             <div class="balkon__content-img">
-                                <img src="img/order/balkon.jpg" alt="balkon">
+                                <img loading="lazy" src="img/order/balkon.jpg" alt="balkon">
                             </div>
                             <div class="balkon__content-montage">
                                 <div class="balkon__content-title">Монтаж крыши</div>
@@ -422,8 +422,8 @@
                             <span>БЕСПЛАТНЫЙ ЗАМЕР</span>
                         </div>
                         <form action="#">
-                            <input type="text" name="name" class="form-input " placeholder="Введите ваше имя" required>
-                            <input type="text" name="phone" class="form-input " placeholder="+7 (___) ___-__-__" required>
+                            <input type="text" name="name" class="form-input" placeholder="Введите ваше имя" required>
+                            <input type="text" name="phone" class="form-input" data-phone placeholder="+7 (___) ___-__-__" required>
                             <button class="button button_big">Вызвать замерщика!</button>
                         </form>
                         <div class="form-policy">Ваши данные конфиденциальны</div>
@@ -438,14 +438,30 @@
             <h2 class="works__title title">Наши работы</h2>
             <div class="works__line line"></div>
             <div class="works__wrapper">
-                <div class="works__item"><img src="img/work/1.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/2.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/3.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/4.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/5.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/6.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/7.jpg" alt="works"></div>
-                <div class="works__item"><img src="img/work/8.jpg" alt="works"></div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/1.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/2.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/3.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/4.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/5.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/6.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/7.jpg" alt="works">
+                </div>
+                <div class="works__item">
+                    <img loading="lazy" src="img/work/8.jpg" alt="works">
+                </div>
             </div>
         </div>
         <div class="works__overlay">
@@ -575,8 +591,8 @@
                         <span>БЕСПЛАТНЫЙ ЗАМЕР</span>
                     </div>
                     <form action="#">
-                        <input type="text" name="name" class="form-input " placeholder="Введите ваше имя" required>
-                        <input type="text" name="phone" class="form-input " placeholder="+7 (___) ___-__-__" required>
+                        <input type="text" name="name" class="form-input" placeholder="Введите ваше имя" required>
+                        <input type="text" name="phone" class="form-input" data-phone placeholder="+7 (___) ___-__-__" required>
                         <button class="button button_big">Вызвать замерщика!</button>
                     </form>
                     <div class="form-policy">Ваши данные конфиденциальны</div>
@@ -591,7 +607,8 @@
             <div class="contacts__line line"></div>
             <div class="contacts__wrapper">
                 <div class="contacts__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.2618174046893!2d37.602909215744454!3d55.92749898597241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53a0ac32d875f%3A0xe1064c1e68c2b74a!2z0YPQuy4g0JLRi9GB0YLQsNCy0L7Rh9C90LDRjywgNTMsINCS0LXRiNC60LgsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDEyNzU0Mw!5e0!3m2!1sru!2sru!4v1607174150713!5m2!1sru!2sru" aria-hidden="false" tabindex="0"></iframe>
+                   <!--  <img src="img/order/map.jpg" alt="map"> -->
+                    <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.2618174046893!2d37.602909215744454!3d55.92749898597241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53a0ac32d875f%3A0xe1064c1e68c2b74a!2z0YPQuy4g0JLRi9GB0YLQsNCy0L7Rh9C90LDRjywgNTMsINCS0LXRiNC60LgsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDEyNzU0Mw!5e0!3m2!1sru!2sru!4v1607174150713!5m2!1sru!2sru" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="contacts__info">
                     <div class="contacts__subtitle">Юридический адрес:</div>
@@ -656,8 +673,8 @@
                     БЕСПЛАТНЫЙ ЗАМЕР
                 </div>
                 <form action="#" method="POST">
-                    <input type="text" name="name" class="form-input " placeholder="Введите ваше имя" required>
-                    <input type="text" name="phone" class="form-input " placeholder="+7 (___) ___-__-__" required>
+                    <input type="text" name="name" class="form-input" placeholder="Введите ваше имя" required>
+                    <input type="text" name="phone" class="form-input" data-phone placeholder="+7 (___) ___-__-__" required>
                     <button class="overlay__button button button_big">Вызвать замерщика!</button>
                     <div class="form-policy">Ваши данные конфиденциальны</div>
                 </form>
