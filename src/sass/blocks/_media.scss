@@ -64,9 +64,6 @@
             grid-template-columns: repeat(3,270px);
             justify-content: center;
         }
-        &__zoom{
-           
-        }
     }
     .stock{
         &__descr{
@@ -127,12 +124,6 @@
             grid-template-rows: auto;
             justify-content:center;
             row-gap:30px;
-        }
-        &-block{
-            &__footer{
-            }
-            &__button{
-            }
         }
     }
     .balkon{
@@ -486,9 +477,6 @@
         &__descr{
             font-size: 18px;
         }
-        &__form{
-        }
-
     }
     .contacts{
         &__map{
@@ -530,7 +518,6 @@
     .footer{
         &__wrapper{
             grid-template-columns: repeat(2,1fr);
-            row-gap: 20px;
         }
         &__descr{
             font-size: 12px;
