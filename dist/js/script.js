@@ -1,3 +1,5 @@
+require('es6-promise').polyfill();
+import 'nodelist-foreach-polyfill';
 import zoom from './modules/zoom';
 import toTop from './modules/toTop';
 import timer from './modules/timer';
