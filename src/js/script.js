@@ -1,5 +1,3 @@
-require('es6-promise').polyfill();
-import 'nodelist-foreach-polyfill';
 import zoom from './modules/zoom';
 import toTop from './modules/toTop';
 import timer from './modules/timer';
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded',() => {
         overlayActiveClass:'works__overlay_active'
    });
    toTop('.up-btn', 'up-btn_active');
-   timer('.stock__timer', '2021-01-01');
+   timer('.stock__timer', '2021-09-10');
    tabs('.balkon__tabs', '.balkon__link', '.balkon__content-block',
         'balkon__link_active', 'balkon__content-block_active');
    phoneMask('[data-phone]');
